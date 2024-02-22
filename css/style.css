@@ -269,12 +269,18 @@ section.story > div.n1 {
   border: 2px solid darkblue;
   margin-bottom: 10px;
   padding: 2px;
-
 }
 .n1 .story-item .story-img img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+}
+.n1 .story-item .txt {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 42px;
 }
 
 .story .swiper-button-next {
@@ -302,9 +308,52 @@ section.story > div.n1 {
   font-size: 16px;
   color: #777;
 }
+
 div.n2 {
   width: 100%;
   height: 300px;
+  position: relative;
+}
+.n2 .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #777;
+  background-color: #fff;
+  position: absolute;
+  right: 80px !important;
+  top: 240px;
+  opacity: 0;
+  transition: all 300ms;
+}
+.n2:hover .swiper-button-next {
+  opacity: 1;
+}
+
+.n2 .swiper-button-next::after {
+  font-size: 16px;
+  color: #777;
+}
+
+.n2 .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #777;
+  background-color: #fff;
+  position: absolute;
+  top: 240px;
+  right: 30px !important;
+  opacity: 0;
+  transition: all 300ms;
+}
+.n2:hover .swiper-button-prev {
+  opacity: 1;
+}
+
+.n2 .swiper-button-prev::after {
+  font-size: 16px;
+  color: #777;
 }
 div.n3 {
   width: 100%;
@@ -405,7 +454,7 @@ section.shegeft > div.slider {
   width: 250px;
   background-color: white;
   padding: 20px 15px;
-  height: 296px;
+  height: 320px;
 }
 .shegeft .slider .productbox:first-child {
   border-radius: 0 10px 10px 0;
@@ -454,10 +503,12 @@ progress::-webkit-progress-bar {
   line-height: 25px;
   color: #fff;
   font-size: 12px;
+  font-family: "BYEKAN";
 }
 .shegeft .slider .productbox .price {
   display: flex;
   flex-direction: column;
+  font-family: "BYEKAN";
 }
 .shegeft .slider .productbox .discount {
   font-weight: 600;
@@ -553,7 +604,8 @@ section.market > div.matn {
   background-color: #39ae00;
   color: white;
   border-radius: 20px;
-  font-size: large;
+  font-size: 14px;
+  font-family: "BYEKAN";
   display: inline-block;
   width: 130px;
   height: 34px;
@@ -593,6 +645,7 @@ section.market > div.kala {
   font-size: 14px;
   display: flex;
   align-items: center;
+  font-family: BYEKAN;
 }
 .market .kala .more span::after {
   content: url(../icons/arrow-left-solid.svg);
@@ -654,6 +707,7 @@ section.market > div.kala {
   color: black;
   display: flex;
   margin-bottom: 15px;
+  font-size: 13px;
 }
 
 .organize .dastebandi a .buy img {
@@ -673,9 +727,9 @@ section.market > div.kala {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  gap: 20px;
 }
 .n6 .bigbanner a {
-  width: 48%;
   display: block;
 }
 .n6 .bigbanner a img {
@@ -1182,6 +1236,7 @@ section.market > div.kala {
   color: #3f4064;
   font-size: 12px;
   text-align: right;
+  
 }
 .bestselling-products .product-column .product-box .product-title {
   display: flex;
@@ -1214,4 +1269,274 @@ section.market > div.kala {
 .bestselling-products .swiper-button-prev::after {
   font-size: 16px;
   color: #777;
+}
+footer {
+  border-top: 1px solid #d2d3d6;
+  margin-top: 40px;
+  padding-top: 40px;
+}
+.footer-content {
+  width: 98%;
+  margin: 0 auto;
+}
+footer .footer-header {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-header .logo-support .support {
+  display: flex;
+}
+
+footer .footer-header .logo-support .support p {
+  padding: 0 15px;
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+footer .footer-header .logo-support .support p:nth-child(2) {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+footer .footer-header .logo-support .support p:first-child {
+  padding-right: 0;
+}
+
+footer .footer-header .return-to-top {
+  text-decoration: none;
+  border: 1px solid rgb(195, 193, 193);
+  border-radius: 8px;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  color: #a1a3a8;
+}
+footer .footer-header .return-to-top::after {
+  content: url(../icons/chevron-up-solid.svg);
+  width: 12px;
+  position: relative;
+  right: 10px;
+  top: 2px;
+}
+.footer-content .property-shop {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 40px 0;
+}
+.footer-content .property-shop .pro-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #575757;
+  font-family: "BYEKAN";
+}
+.footer-content .property-shop .pro-item img {
+  width: 56px;
+  height: 56px;
+}
+.footer-content .footer-menu {
+  display: flex;
+}
+.footer-content .footer-menu .box {
+  width: 25%;
+}
+.footer-content .footer-menu .box .title {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.footer-content .footer-menu .box .list {
+  list-style-type: none;
+}
+.footer-content .footer-menu .box .list li {
+  margin-bottom: 10px;
+}
+.footer-content .footer-menu .box .list li a {
+  text-decoration: none;
+  color: #9e9c9c;
+  font-size: 15px;
+}
+.footer-content .contact-us .social-icon {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+  margin: 20px 0 30px;
+}
+.footer-content .contact-us .social-icon a {
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+}
+
+.footer-content .contact-us .social-icon a img {
+  width: 100%;
+}
+.footer-content .contact-us form {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+.footer-content .contact-us form input,
+.footer-content .contact-us form button {
+  background-color: #f0f3f1;
+  height: 44px;
+  border: unset;
+  border-radius: 8px;
+  width: 80%;
+  padding: 0 10px;
+  font-size: 14px;
+  font-family: IRANYekanMedium;
+}
+.footer-content .contact-us form input:focus {
+  outline: unset;
+}
+.footer-content .contact-us form button {
+  width: 18%;
+  color: white;
+  background-color: #e0e0e2;
+}
+.footer-content .download-app {
+  background-color: #3c4b6d;
+  width: 100%;
+}
+.footer-content .download-app .logo {
+  width: 30%;
+}
+.footer-content .download-app .logo img {
+  width: 44px;
+}
+.footer-content .download-app .logo span {
+  font-size: 20px;
+  color: white;
+  margin-right: 10px;
+}
+.footer-content .download-app .three-items {
+  gap: 15px;
+}
+.footer-content .download-app .three-items .item {
+  width: 142px;
+  background-color: unset;
+  padding: 0;
+}
+
+.footer-content .download-app .three-items .item .picture {
+  width: 142px;
+  height: 44px;
+}
+.footer-content .download-app .three-items .item .picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+.footer-content .download-app .three-items .see-more {
+  background-color: #fff;
+  width: 44px;
+  border-radius: 4px;
+}
+.footer-content .aboutus {
+  display: flex;
+  border-top: 1px solid #a1a3a8;
+  border-bottom: 1px solid #a1a3a8;
+  justify-content: space-between;
+  padding: 30px 0 40px;
+}
+.footer-content .aboutus .aboutus-txt {
+  width: 70%;
+  padding-left: 20px;
+}
+.footer-content .aboutus .aboutus-txt .title {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 10px;
+}
+.footer-content .aboutus .aboutus-txt .description {
+  font-size: 12px;
+  color: #666;
+}
+.footer-content .aboutus .aboutus-txt .more-btn {
+  color: #19bfd3;
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.footer-content .aboutus .aboutus-txt .more-btn::after {
+  content: url(../icons/chevron-left-solid-light-blue.svg);
+  position: relative;
+  right: 6px;
+  top: 2px;
+}
+.footer-content .aboutus .certificates {
+  display: flex;
+  width: 30%;
+  justify-content: end;
+  gap: 10px;
+}
+.footer-content .aboutus .certificates a {
+  height: 110px;
+  width: 110px;
+  display: block;
+  padding: 15px;
+  border: 1px solid #a1a3a8;
+  border-radius: 8px;
+}
+.footer-content .aboutus .certificates a img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+div.copyright {
+  padding: 20px 0;
+}
+div.copyright p {
+  text-align: center;
+}
+.brand-section {
+  background-color: #f0f0f1;
+}
+.brand-section .brands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.brand-section .brand-item {
+  height: 80px;
+  width: 12.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #a1a3a8;
+  border-right: unset;
+  border-top: unset;
+}
+.brand-section .brand-item:nth-child(8) {
+  border-left: unset;
+}
+.brand-section .brand-item:nth-child(15) {
+  border-left: unset;
+}
+.brand-section .r2 {
+  border-bottom: unset;
+  width: 14.2%;
+}
+.brand-section .brand-item img {
+  width: 60%;
+}
+#support-btn{
+  width: 40px;
+  height: 40px;
+  background-color: #ef4056;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  z-index: 4444;
+}
+#support-btn img{
+  width: 20px;
+  
 }
